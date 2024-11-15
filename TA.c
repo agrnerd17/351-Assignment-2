@@ -25,9 +25,14 @@ int CurrentIndex = 0;
  
  //hint: use sem_t and pthread_mutex_t
  
- 
  */
 
+sem_t TA_sleep;				//TA sleeps if no students are at the desk
+sem_t student_signal[3];	//Signals for when the student needs help
+sem_t student_waiting;		//Controls the number of students that can wait
+sem_t signal_done;			//Used to signal when a TA is finished
+
+pthread_mutex_t mutex;
 
 
 //Declared Functions
@@ -46,7 +51,12 @@ int main(int argc, char* argv[])
      //hint: use sem_init() and pthread_mutex_init()
      
      */
-	
+	sem_init(&TA_sleep, 0, 0);
+	sem_init(&student_signal, 0, 3);
+	sem_init(&student_waiting, 0, number_of_students);
+	sem_init(&signal_done, 0, 0);
+	//initialize mutex
+
 	if(argc<2)
 	{
 		printf("Number of Students not specified. Using default (5) students.\n");
@@ -64,12 +74,17 @@ int main(int argc, char* argv[])
     /*TODO
 	//Creating one TA thread and N Student threads.
      //hint: use pthread_create
-
 	//Waiting for TA thread and N Student threads.
      //hint: use pthread_join
-     
      */
+	pthread_create(TA, NULL, TA_Activity, NULL);
+	for(int i = 0; i < number_of_students; i++){
+		pthread_create(&Students[i], NULL, Student_Activity, NULL);
+	}
 
+	for(int i = 0; i < number_of_students; i++){
+		pthread_join(&Stidents[i], NULL);
+	}
 	//Free allocated memory
 	free(Students); 
 	return 0;
@@ -77,6 +92,9 @@ int main(int argc, char* argv[])
 
 void *TA_Activity()
 {
+	/*
+		Partially done
+	*/
     /* TODO
 	//TA is currently sleeping.
 
@@ -91,6 +109,25 @@ void *TA_Activity()
 	//TA is currently helping the student
      
      //hint: use sem_wait(); sem_post(); pthread_mutex_lock(); pthread_mutex_unlock()
+
+	 While(1) {
+	 	//TA is doing nothing
+	 	sem_wait(&TA_sleep);
+
+		//TA is waiting for a student
+		sem_wait(&student_signal);
+		
+		printf("The TA is helping the student.\n");
+		//implement sleep time here to simulate the time spent helping the student
+		sleep(X)
+
+		//signals for next student
+		sem_post(&done_signal);
+
+		//releases chair for next student
+		sem_post(&student_signal);
+
+	 }
 
 */
 }
