@@ -7,4 +7,4 @@
 
 # Group contributions:
 - Amelie: Created diagram 
-- Luke can I edit now
+- 
