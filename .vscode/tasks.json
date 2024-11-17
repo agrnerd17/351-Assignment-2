@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C Program",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-pthread",      // Include pthread library
+                "TA.c",         // Updated source file name
+                "-o",
+                "TA"            // Output executable name (same as filename without extension)
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building the TA-Student problem."
+        }
+    ]
+}
+
