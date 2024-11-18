@@ -6,14 +6,18 @@
 - Luke Makishima, 351-02, LukeMakishima@csu.fullerton.edu
 
 # Group contributions:
-- Amelie: Created diagram and worked on some of the code
-- Luke: Tested code, provided Linux envirnment to make sure everything worked.
-- Robert: Helped with diagram and created skeleton code
+- Amelie: Created diagram and worked on some of the code.
+- Luke: Tested code and sat there.
+- Robert: Helped with diagram and created skeleton code.
 
 # Program Running Instructions:
-- Linux
+- Linux environment 
 - Open command prompt and navigate to the directory with the file TA.c
-- Enter the command "gcc -pthread TA.c -o TA" (Without the quotes)
+- Enter the command:
+```
+gcc -pthread TA.c -o TA
+./TA <number of students>
+```
 
 # Screenshot of our Program:
 
