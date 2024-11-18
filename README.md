@@ -7,5 +7,5 @@
 
 # Group contributions:
 - Amelie: Created diagram and worked on some of the code
-- Luke:Tested code
+- Luke: Tested code, provided Linux envirnment to make sure everything worked.
 - Robert: Helped with diagram and created skeleton code
