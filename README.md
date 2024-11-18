@@ -21,3 +21,4 @@ gcc -pthread TA.c -o TA
 
 # Screenshot of our Program:
 
+![Program Output](./351_Assignment_2_Output.png)

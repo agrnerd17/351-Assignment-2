@@ -1,21 +1,21 @@
-#include <pthread.h>        //Create POSIX threads.
-#include <time.h>           //Wait for a random time.
-#include <unistd.h>         //Thread calls sleep for specified number of seconds.
-#include <semaphore.h>      //To create semaphores
+#include <pthread.h>        
+#include <time.h>           
+#include <unistd.h>         
+#include <semaphore.h>      
 #include <stdlib.h>         
-#include <stdio.h>          //Input Output
+#include <stdio.h>         
 
-pthread_t *Students;        //N threads running as Students.
-pthread_t TA;               //Separate Thread for TA.
+pthread_t *Students;        
+pthread_t TA;               
 
 int ChairsCount = 0;
 int CurrentIndex = 0;
 
 //Semaphores and Mutex Lock
-sem_t TA_sleep;             //TA sleeps if no students are at the desk
-sem_t student_signal[3];    //Signals for when the student needs help
-sem_t student_waiting;      //Controls the number of students that can wait
-sem_t signal_done;          //Used to signal when a TA is finished
+sem_t TA_sleep;             
+sem_t student_signal[3];    
+sem_t student_waiting;      
+sem_t signal_done;          
 
 pthread_mutex_t mutex;
 
