@@ -6,5 +6,6 @@
 - Luke Makishima, 351-02, LukeMakishima@csu.fullerton.edu
 
 # Group contributions:
-- Amelie: Created diagram 
-- 
+- Amelie: Created diagram and worked on some of the code
+- Luke:Tested code
+- Robert: Helped with diagram and created skeleton code
