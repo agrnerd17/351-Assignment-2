@@ -9,3 +9,8 @@
 - Amelie: Created diagram and worked on some of the code
 - Luke: Tested code, provided Linux envirnment to make sure everything worked.
 - Robert: Helped with diagram and created skeleton code
+
+# Program Running Instructions:
+- Linux
+- Open command prompt and navigate to the directory with the file TA.c
+- 
