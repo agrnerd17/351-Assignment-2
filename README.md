@@ -19,6 +19,9 @@ gcc -pthread TA.c -o TA
 ./TA <number of students>
 ```
 
+# Programming Language Used:
+- C++
+
 # Screenshot of our Program:
 
 ![Program Output](./351_Assignment_2_Output.png)
