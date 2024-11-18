@@ -13,7 +13,7 @@
 # Program Running Instructions:
 - Linux
 - Open command prompt and navigate to the directory with the file TA.c
-- Enter the command [ gcc -pthread TA.c -o TA ] (Without the brackets)
+- Enter the command "gcc -pthread TA.c -o TA" (Without the quotes)
 
 # Screenshot of our Program:
 
